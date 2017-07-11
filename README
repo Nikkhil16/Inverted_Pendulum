@@ -1,0 +1,28 @@
+Readme for this folder
+
+'no_force_input.mp4' shows the behavior of the system if there is no control input. This shows that the physics of the simulator is correct.
+'pid.mp4' shows the behavior of the system if a PID controller is used
+'lqr.mp4' shows the behavior of the system if a PID controller is used
+'inverted_pendulum.py' is the code
+_________________________________________________________________________________________________________________________________________________
+Readme for 'inverted_pendulum.py'
+
+This code uses the following libraries:
+numpy, cv2, math, time, matplotlib and control (https://pypi.python.org/pypi/control/0.7.0)
+
+To install the control library please run the following:
+>> pip install slycot
+(If this gives an error like 'fortran compiler not found', please run >> sudo apt-get install gfortran)
+>> pip install control
+
+Usage: python inverted_pendulum.py <controller_used>
+Options for <controller_used> = "lqr","pid"
+Example: python inverted_pendulum.py lqr
+
+Running the code will show a simulation of the system. The simulation runs for 30 seconds but this can be changed in the main() function. 
+When the simulation ends, 4 graphs are shown which show the:
+- error vs time, 
+- theta value (of the pendulum) vs time,
+- force input vs time, and 
+- X position of the cart vs time. 
+_________________________________________________________________________________________________________________________________________________
